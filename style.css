@@ -310,7 +310,7 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 }
 
@@ -323,11 +323,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    height: 100%;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--glow-intensity) var(--accent-color);
+    border-color: var(--neon-blue);
 }
 
 .project-header {
@@ -339,6 +341,7 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 1rem;
     margin-bottom: 1rem;
+    line-height: 1.4;
 }
 
 .project-tech {
@@ -355,17 +358,32 @@ body {
     border-radius: 3px;
     font-size: 0.8rem;
     border: 1px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: rgba(0, 255, 157, 0.2);
+    transform: translateY(-2px);
 }
 
 .project-links {
     margin-top: auto;
     display: flex;
     gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 255, 157, 0.1);
 }
 
 .project-links .cyber-button {
     font-size: 0.7rem;
     padding: 0.4rem 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.project-links .cyber-button:hover {
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    transform: translateY(-2px);
 }
 
 .project-achievements {
@@ -381,6 +399,11 @@ body {
     color: var(--text-secondary);
     font-size: 0.9rem;
     line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.project-achievements li:hover {
+    color: var(--text-primary);
 }
 
 .project-achievements li::before {
