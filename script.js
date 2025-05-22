@@ -2,24 +2,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = question?.querySelector('.faq-icon');
 
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        const icon = question.querySelector('.faq-icon');
-
-        question.addEventListener('click', () => {
-            // Close all other items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
-            });
-            
-            // Toggle current item
-            item.classList.toggle('active');
+            if (question && answer) {
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            }
         });
-    });
+    }
 
     // Smooth scrolling for anchor links (if you add any)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -36,48 +39,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Header Scroll Effect
-    const header = document.querySelector('header');
+    const header = document.querySelector('.cyber-nav');
     let lastScroll = 0;
 
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll <= 0) {
-            header.classList.remove('scroll-up');
-            return;
-        }
-        
-        if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-            // Scroll Down
-            header.classList.remove('scroll-up');
-            header.classList.add('scroll-down');
-        } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-            // Scroll Up
-            header.classList.remove('scroll-down');
-            header.classList.add('scroll-up');
-        }
-        
-        lastScroll = currentScroll;
-    });
+    if (header) {
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('scroll-up');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                // Scroll Down
+                header.classList.remove('scroll-up');
+                header.classList.add('scroll-down');
+            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                // Scroll Up
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    }
 
     // Image Lazy Loading
     const lazyImages = document.querySelectorAll('img[data-src]');
-    
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-                observer.unobserve(img);
-            }
+    if (lazyImages.length > 0) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
         });
-    });
-    
-    lazyImages.forEach(img => imageObserver.observe(img));
+        
+        lazyImages.forEach(img => imageObserver.observe(img));
+    }
 
     // Animate Numbers in Stats
     function animateValue(obj, start, end, duration) {
+        if (!obj) return;
+        
         let startTimestamp = null;
         const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
@@ -99,7 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     const stats = entry.target.querySelectorAll('span');
                     stats.forEach(stat => {
                         const value = parseInt(stat.textContent);
-                        animateValue(stat, 0, value, 2000);
+                        if (!isNaN(value)) {
+                            animateValue(stat, 0, value, 2000);
+                        }
                     });
                     observer.unobserve(entry.target);
                 }
@@ -299,7 +309,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize Matrix Rain
-    new MatrixRain();
+    const matrixRain = document.querySelector('.matrix-rain');
+    if (matrixRain) {
+        new MatrixRain();
+    }
 
     // Typing Effect
     class TypingEffect {
@@ -322,20 +335,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize typing effects
     document.querySelectorAll('.typing-text').forEach(element => {
-        const text = element.textContent;
-        element.textContent = '';
-        new TypingEffect(element, text);
+        if (element) {
+            const text = element.textContent;
+            element.textContent = '';
+            new TypingEffect(element, text);
+        }
     });
 
     // Skill Bars Animation
     const animateSkillBars = () => {
         const skillItems = document.querySelectorAll('.skill-item');
-        
-        skillItems.forEach(item => {
-            const level = item.getAttribute('data-level');
-            const bar = item.querySelector('.skill-bar');
-            bar.style.setProperty('--skill-level', `${level}%`);
-        });
+        if (skillItems.length > 0) {
+            skillItems.forEach(item => {
+                const level = item.getAttribute('data-level');
+                const bar = item.querySelector('.skill-bar');
+                if (bar && level) {
+                    bar.style.setProperty('--skill-level', `${level}%`);
+                }
+            });
+        }
     };
 
     // Intersection Observer for animations
@@ -354,7 +372,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Observe sections
     document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
+        if (section) {
+            observer.observe(section);
+        }
     });
 
     // Terminal Interface (Easter Egg)
@@ -459,26 +479,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize Terminal
-    new Terminal();
+    const terminal = document.querySelector('.terminal-interface');
+    if (terminal) {
+        new Terminal();
+    }
 
     // Glitch Effect
     const glitchText = document.querySelector('.glitch-text');
-    let glitchInterval;
+    if (glitchText) {
+        let glitchInterval;
 
-    const startGlitch = () => {
-        glitchInterval = setInterval(() => {
-            glitchText.style.textShadow = `
-                ${Math.random() * 10}px ${Math.random() * 10}px ${Math.random() * 10}px rgba(0, 255, 157, 0.7),
-                ${Math.random() * -10}px ${Math.random() * -10}px ${Math.random() * 10}px rgba(255, 0, 255, 0.7)
-            `;
-        }, 50);
-    };
+        const startGlitch = () => {
+            glitchInterval = setInterval(() => {
+                glitchText.style.textShadow = `
+                    ${Math.random() * 10}px ${Math.random() * 10}px ${Math.random() * 10}px rgba(0, 255, 157, 0.7),
+                    ${Math.random() * -10}px ${Math.random() * -10}px ${Math.random() * 10}px rgba(255, 0, 255, 0.7)
+                `;
+            }, 50);
+        };
 
-    const stopGlitch = () => {
-        clearInterval(glitchInterval);
-        glitchText.style.textShadow = '0 0 10px rgba(0, 255, 157, 0.7)';
-    };
+        const stopGlitch = () => {
+            clearInterval(glitchInterval);
+            glitchText.style.textShadow = '0 0 10px rgba(0, 255, 157, 0.7)';
+        };
 
-    glitchText.addEventListener('mouseenter', startGlitch);
-    glitchText.addEventListener('mouseleave', stopGlitch);
+        glitchText.addEventListener('mouseenter', startGlitch);
+        glitchText.addEventListener('mouseleave', stopGlitch);
+    }
 });
