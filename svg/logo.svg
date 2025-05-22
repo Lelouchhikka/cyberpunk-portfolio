@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .logo-text { font-family: 'Anton', sans-serif; font-size: 24px; fill: #00FF00; }
+        .version { font-size: 16px; fill: #FFFFFF; }
+        .tm { font-size: 12px; fill: #FFFFFF; }
+    </style>
+    <text x="10" y="35" class="logo-text">DECENTRATHON<tspan class="tm">™</tspan> <tspan class="version">3.0</tspan></text>
+</svg> 

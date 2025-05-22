@@ -1,0 +1,497 @@
+/* style.css */
+:root {
+    --primary-bg: #0a0a0f;
+    --secondary-bg: #141420;
+    --accent-color: #00ff9d;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --neon-blue: #00f3ff;
+    --neon-pink: #ff00ff;
+    --neon-purple: #9d00ff;
+    --glow-intensity: 0 0 10px;
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --text-color: #FFFFFF;
+    --text-grey: #b0b0b0;
+    --light-bg: #F8F9FA;
+    --dark-bg: #080808;
+    --transition: all 0.3s ease;
+    --primary-green: #AFFF34;
+    --bright-green-text: #39FF14;
+    --card-bg: #1a1a1a;
+    --button-purple: #6A0DAD;
+    --button-orange: #FF8C00;
+    --tag-blue-border: #4A4AFF;
+    --tag-blue-bg: rgba(74, 74, 255, 0.15);
+    --font-main: 'Poppins', sans-serif;
+    --font-display: 'Anton', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal {
+    width: 80%;
+    max-width: 600px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: var(--glow-intensity) var(--accent-color);
+}
+
+.terminal-header {
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.terminal-title {
+    color: var(--accent-color);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+}
+
+.loading-text {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 4px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--accent-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: var(--accent-color);
+    animation: progress 2s ease-in-out forwards;
+}
+
+/* Navigation */
+.cyber-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    text-shadow: var(--glow-intensity) var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.cyber-button {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-color);
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-button:hover {
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    box-shadow: var(--glow-intensity) var(--accent-color);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.glitch-container {
+    text-align: center;
+    position: relative;
+}
+
+.glitch-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    color: var(--text-primary);
+    text-shadow: var(--glow-intensity) var(--accent-color);
+    position: relative;
+    animation: glitch 1s infinite;
+}
+
+.cyber-subtitle {
+    font-family: 'Fira Code', monospace;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-shadow: var(--glow-intensity) var(--accent-color);
+}
+
+.matrix-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* About Section */
+.about-section {
+    padding: 100px 0;
+    background: var(--secondary-bg);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cyber-heading {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--accent-color);
+    font-size: 2rem;
+    text-shadow: var(--glow-intensity) var(--accent-color);
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    background: rgba(0, 255, 157, 0.05);
+}
+
+.stat-value {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 0.5rem;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 100px 0;
+    background: var(--primary-bg);
+}
+
+.skills-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+.category-title {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+    height: 4px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--accent-color);
+    position: relative;
+}
+
+.skill-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--skill-level);
+    background: var(--accent-color);
+    box-shadow: var(--glow-intensity) var(--accent-color);
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 100px 0;
+    background: var(--secondary-bg);
+}
+
+.projects-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--primary-bg);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow-intensity) var(--accent-color);
+}
+
+.project-header {
+    margin-bottom: 1.5rem;
+}
+
+.project-tech {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background: rgba(0, 255, 157, 0.1);
+    color: var(--accent-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+    background: var(--primary-bg);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-label {
+    color: var(--accent-color);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Terminal Interface */
+.terminal-interface {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    display: none;
+}
+
+.terminal-header {
+    padding: 10px;
+    border-bottom: 1px solid var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-color);
+}
+
+.terminal-content {
+    padding: 10px;
+}
+
+.terminal-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.command-input {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: 'Fira Code', monospace;
+    width: 100%;
+    outline: none;
+}
+
+/* Animations */
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 0 var(--neon-pink), -2px 0 var(--neon-blue);
+    }
+    25% {
+        text-shadow: -2px 0 var(--neon-pink), 2px 0 var(--neon-blue);
+    }
+    50% {
+        text-shadow: 2px 0 var(--neon-purple), -2px 0 var(--neon-pink);
+    }
+    75% {
+        text-shadow: -2px 0 var(--neon-purple), 2px 0 var(--neon-blue);
+    }
+    100% {
+        text-shadow: 2px 0 var(--neon-pink), -2px 0 var(--neon-blue);
+    }
+}
+
+@keyframes progress {
+    to {
+        width: 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .glitch-text {
+        font-size: 2rem;
+    }
+    
+    .cyber-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .terminal-interface {
+        width: 100%;
+        bottom: 0;
+        right: 0;
+    }
+}

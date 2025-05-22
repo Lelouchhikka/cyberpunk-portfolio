@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="60" viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .title { font-family: 'Anton', sans-serif; font-size: 36px; fill: #00FF00; }
+        .subtitle { font-family: 'Poppins', sans-serif; font-size: 16px; fill: #FFFFFF; }
+    </style>
+    <text x="150" y="35" text-anchor="middle" class="title">FAQ</text>
+    <text x="150" y="55" text-anchor="middle" class="subtitle">Frequently Asked Questions</text>
+</svg> 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150" height="40" viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .button { fill: #800080; }
+        .button-text { font-family: 'Poppins', sans-serif; font-size: 14px; fill: #FFFFFF; font-weight: 600; }
+    </style>
+    <rect class="button" x="0" y="0" width="150" height="40" rx="20"/>
+    <text x="75" y="25" text-anchor="middle" class="button-text">Q/A SESSION</text>
+</svg> 

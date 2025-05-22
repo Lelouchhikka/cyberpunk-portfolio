@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .planet { fill: #1A1A1A; stroke: #00FF00; stroke-width: 2; }
+        .continent { fill: #2A2A2A; }
+        .orbit { fill: none; stroke: #00FF00; stroke-width: 1; stroke-dasharray: 5,5; }
+    </style>
+    <circle class="planet" cx="100" cy="100" r="80"/>
+    <path class="continent" d="M60,60 Q80,40 100,60 T140,60 Q160,80 140,100 T140,140 Q120,160 100,140 T60,140 Q40,120 60,100 T60,60"/>
+    <circle class="orbit" cx="100" cy="100" r="90"/>
+</svg> 

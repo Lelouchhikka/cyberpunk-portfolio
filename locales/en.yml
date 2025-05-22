@@ -1,0 +1,86 @@
+header:
+  title: "Kelman Erasyl"
+  subtitle: "Software Developer"
+
+contact:
+  title: "CONTACT"
+  phone: "+7 747 185 76 60"
+  email: "erasyl.kelman@gmail.com"
+  location: "Kazakhstan, Astana-Almaty"
+
+skills:
+  title: "SKILLS"
+  programming_languages: "Programming Languages"
+  programming_languages_list: "PHP (Laravel), Python (Django), Java (Spring Boot), JavaScript (React, Bootstrap), Dart (Flutter)"
+  frontend: "Frontend Development"
+  frontend_list: "HTML5, CSS3, Bootstrap, Blade templating"
+  databases: "Databases"
+  databases_list: "PostgreSQL, MySQL"
+  practices: "Development Practices"
+  practices_list: "Clean Architecture, SOLID principles, microservices, RESTful APIs"
+
+languages:
+  title: "LANGUAGES"
+  english: "English (Upper-Intermediate)"
+  russian: "Russian (Fluent)"
+  kazakh: "Kazakh (Fluent)"
+
+profile:
+  title: "PROFILE"
+  description: "As a versatile software developer with 1.5 years of commercial experience and 2 years of non-commercial projects, I am passionate about creating innovative and efficient solutions. I seek opportunities to leverage my expertise in backend and frontend development, with a strong focus on clean code and scalable architectures, to contribute to impactful projects"
+
+experience:
+  title: "WORK EXPERIENCE"
+  panda_innovations:
+    title: "Panda Innovations"
+    position: "Web Developer"
+    period: "JULY 2023 - MAY 2024"
+    achievements:
+      - "Spearheaded the development of backend systems for dodoc.kz, including integrations with third-party APIs and Telegram bots"
+      - "Improved website responsiveness and user interaction through frontend enhancements using Blade templating"
+      - "Implemented caching strategies and server optimizations, enhancing performance by 30%"
+  mts:
+    title: "MTS"
+    position: "PHP Developer"
+    period: "JUNE 2024 - SEPTEMBER 2024"
+    achievements:
+      - "Built efficient backend solutions, focusing on scalability and clean code principles"
+      - "Optimized API response times by 15% through innovative caching and query improvements"
+      - "Delivered successful migrations and system updates without service disruptions"
+
+education:
+  title: "EDUCATION"
+  it_step:
+    title: "Academy of Programming 'IT STEP'"
+    period: "2019 - 2021"
+    description: "Diploma in Software Development. Specialized in PHP, Python, Java, and C# development. Gained hands-on experience with databases, frameworks, and game development (Unity2D). Studied software architecture, UML, and application design principles."
+    diploma: "Diploma Serial Code: AS-020505"
+  aupet:
+    title: "Almaty University of Power Engineering and Telecommunications"
+    period: "2021-2025"
+    description: "Integration and Management of Smart Technologies for Energy Saving and Energy Efficiency in the Electric Power Industry"
+
+projects:
+  title: "PROJECTS"
+  astanu_food:
+    title: "Astanu Food and Face Detection System"
+    achievements:
+      - "Achieved prize-winning recognition for developing a model that detects and recognizes food with high precision"
+      - "Trained a custom YOLOv8 model with over 30 food classes and deployed it using Flask API"
+      - "Integrated the system into applications for real-time food and face recognition"
+  internet_store:
+    title: "Internet Store Application"
+    achievements:
+      - "Designed a robust e-commerce platform using Laravel, incorporating advanced payment systems"
+      - "Developed intuitive admin interfaces and seamless user experiences"
+      - "GitHub: https://github.com/Lelouchhikka/Internet-Store-by-Lelouchhikka"
+  task_management:
+    title: "Task Management Application"
+    achievements:
+      - "Delivered a responsive and accessible task management solution for day-to-day activities"
+      - "GitHub: https://github.com/Lelouchhikka/TaskStore"
+  job_posting:
+    title: "Job Posting API"
+    achievements:
+      - "RESTful API for managing job listings and applications"
+      - "GitHub: https://github.com/Lelouchhikka/Job-Posting-API-" 

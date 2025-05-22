@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .button { fill: #1A1A1A; stroke: #00FF00; stroke-width: 2; }
+        .text { font-family: 'Poppins', sans-serif; font-size: 14px; fill: #FFFFFF; }
+    </style>
+    <rect class="button" x="0" y="0" width="200" height="40" rx="20"/>
+    <text x="100" y="25" text-anchor="middle" class="text">OPPORTUNITY FOR YOU!</text>
+</svg> 

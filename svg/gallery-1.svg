@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .image-frame { fill: #1A1A1A; stroke: #00FF00; stroke-width: 2; }
+        .image-content { fill: #2A2A2A; }
+    </style>
+    <rect class="image-frame" x="0" y="0" width="400" height="300" rx="10"/>
+    <rect class="image-content" x="10" y="10" width="380" height="280" rx="5"/>
+</svg> 

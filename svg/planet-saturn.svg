@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .planet { fill: #1A1A1A; stroke: #00FF00; stroke-width: 2; }
+        .ring { fill: none; stroke: #00FF00; stroke-width: 4; }
+        .orbit { fill: none; stroke: #00FF00; stroke-width: 1; stroke-dasharray: 5,5; }
+    </style>
+    <circle class="planet" cx="100" cy="100" r="60"/>
+    <ellipse class="ring" cx="100" cy="100" rx="90" ry="30" transform="rotate(-20 100 100)"/>
+    <circle class="orbit" cx="100" cy="100" r="90"/>
+</svg> 
